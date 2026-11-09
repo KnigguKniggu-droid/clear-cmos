@@ -1,0 +1,187 @@
+- !<AssetImportMetadata/a9c10cc6-adbd-4e37-854a-6d09aa86cb98>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2b16d44f-3d07-487f-937f-a962d4ada117
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2b16d44f-3d07-487f-937f-a962d4ada117
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ccefba2c-a2e9-4eae-a456-56e86878e124
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ccefba2c-a2e9-4eae-a456-56e86878e124>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 37231363-fd9b-4621-825e-fa3a630c5809
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    anchorButton: false
+    arrow: false
+    battery: false
+    batteryLabel: false
+    batteryPad: false
+    batteryRedPart: false
+    cameraObject: false
+    cordLabel: false
+    dramLed: false
+    genericRefusal: false
+    glass: false
+    glassLabel: false
+    gpu: false
+    gpuLabel: false
+    jumper: false
+    jumperLabel: false
+    memoryStick: false
+    minDragCm: false
+    monitor: false
+    nextCue: false
+    overlayMaterial: false
+    padAcceptCm: false
+    padFlashSeconds: false
+    powerButton: false
+    powerCord: false
+    powerLabel: false
+    proximityCm: false
+    rebuildButton: false
+    recordingMode: false
+    refusalLine: false
+    refusalSeconds: false
+    rig: false
+    rstJumper: false
+    screwdriverHoldSeconds: false
+    socket: false
+    stepLabel: false
+    stepLabel2: false
+    symptomButton: false
+    symptomLabel: false
+    symptomLabelLine1: false
+    symptomLabelLine2: false
+    symptomNote: false
+    trainingSeconds: false
+    waitCard: false
+    waitSeconds: false
+    xRay: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - recordingMode: false
+      waitSeconds: !<float> 10.000000
+      trainingSeconds: !<float> 6.000000
+      screwdriverHoldSeconds: 0.350000
+      padFlashSeconds: 0.150000
+      padAcceptCm: !<float> 3.000000
+      minDragCm: !<float> 3.000000
+      refusalSeconds: !<float> 4.000000
+      proximityCm: !<float> 20.000000
+      genericRefusal: Not yet. Do the step with the green ring.
+      symptomLabelLine1: "DRAM light on and no signal for several minutes? Pinch the light."
+      symptomLabelLine2: "If it just started, wait. Memory training can look like this."
+      cordLabel: Unplug power
+      glassLabel: Lift glass off
+      gpuLabel: Lift GPU out
+      jumperLabel: Pinch jumper
+      batteryLabel: Drag to pad
+      powerLabel: Power on
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rig: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      overlayMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      dramLed: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      monitor: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      xRay: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      arrow: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      nextCue: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      batteryPad: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      powerCord: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      glass: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      gpu: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      jumper: !<MappingBased.AssignableType_7> 00000000-0000-0000-0000-000000000000
+      rstJumper: !<MappingBased.AssignableType_8> 00000000-0000-0000-0000-000000000000
+      battery: !<MappingBased.AssignableType_9> 00000000-0000-0000-0000-000000000000
+      batteryRedPart: !<MappingBased.AssignableType_10> 00000000-0000-0000-0000-000000000000
+      socket: !<MappingBased.AssignableType_11> 00000000-0000-0000-0000-000000000000
+      memoryStick: !<MappingBased.AssignableType_12> 00000000-0000-0000-0000-000000000000
+      powerButton: !<MappingBased.AssignableType_13> 00000000-0000-0000-0000-000000000000
+      symptomButton: !<MappingBased.AssignableType_14> 00000000-0000-0000-0000-000000000000
+      anchorButton: !<MappingBased.AssignableType_15> 00000000-0000-0000-0000-000000000000
+      rebuildButton: !<MappingBased.AssignableType_16> 00000000-0000-0000-0000-000000000000
+      symptomLabel: !<MappingBased.AssignableType_17> 00000000-0000-0000-0000-000000000000
+      symptomNote: !<MappingBased.AssignableType_18> 00000000-0000-0000-0000-000000000000
+      stepLabel: !<MappingBased.AssignableType_19> 00000000-0000-0000-0000-000000000000
+      stepLabel2: !<MappingBased.AssignableType_20> 00000000-0000-0000-0000-000000000000
+      refusalLine: !<MappingBased.AssignableType_21> 00000000-0000-0000-0000-000000000000
+      waitCard: !<MappingBased.AssignableType_22> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ClearCmosMain – repair flow</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input bool recordingMode {"hint":"Recording only. On: LeafIndex and LEAF Plugin Bridge are disabled at start, so no LEAF scenario or LEAF overlay can show, and the chassis cage, table edge, and idle Monitor frame are hidden or dimmed for video. Turn it off to run tests."}'
+    - '// @input float waitSeconds = 10 {"hint":"Time-lapsed wait in seconds after the fix. LEAF scenarios set this to 1.", "widget":"slider", "min":1, "max":30, "step":1}'
+    - '// @input float trainingSeconds = 6 {"hint":"Time-lapsed first-boot hold in seconds. LEAF scenarios set this to 3.", "widget":"slider", "min":1, "max":30, "step":1}'
+    - '// @input float screwdriverHoldSeconds = 2 {"hint":"Seconds the screwdriver holds on the pins at the fix."}'
+    - '// @input float padFlashSeconds = 0.15 {"hint":"Seconds the jumper pads flash on contact. The audit value is 0.15."}'
+    - '// @input float padAcceptCm = 3 {"hint":"Maximum distance in cm between the battery and the pad to accept a drop.", "widget":"slider", "min":1, "max":8, "step":0.5}'
+    - '// @input float minDragCm = 3 {"hint":"Minimum battery drag in cm from its marked edge.", "widget":"slider", "min":1, "max":8, "step":0.5}'
+    - '// @input float refusalSeconds = 2.5 {"hint":"Seconds the refusal line stays visible.", "widget":"slider", "min":1, "max":10, "step":0.5}'
+    - '// @input float proximityCm = 20 {"hint":"Distance in cm between the cursor and a no-go box at which the box starts to strengthen.", "widget":"slider", "min":5, "max":40, "step":1}'
+    - '// @input string genericRefusal = "Follow the green ring first." {"hint":"Refusal line used when a part has no refusal text of its own."}'
+    - '// @input string symptomLabelLine1 = "DRAM light stuck on? Pinch it." {"hint":"Opening label beside the DRAM light, first line."}'
+    - '// @input string symptomLabelLine2 = "If it just started, wait. Memory training can look like this." {"hint":"Opening label beside the DRAM light, second line."}'
+    - '// @input string cordLabel = "Unplug the power cord" {"hint":"Step label: power cord."}'
+    - '// @input string glassLabel = "Lift the glass side panel" {"hint":"Step label: glass."}'
+    - '// @input string gpuLabel = "Or lift graphics card" {"hint":"Label for the optional battery route: lift the graphics card."}'
+    - '// @input string jumperLabel = "Pinch CLR_CMOS pins" {"hint":"Step label: jumper."}'
+    - '// @input string batteryLabel = "Drag battery to green pad" {"hint":"Step label: battery."}'
+    - '// @input string powerLabel = "Press the power button" {"hint":"Step label: power button."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - "// @input SceneObject cameraObject {\"hint\":\"Camera object used to place the rig at the user's start.\"}"
+    - '// @input SceneObject rig {"hint":"Rig root."}'
+    - '// @input Asset.Material overlayMaterial {"hint":"Transparent unlit material cloned for rings and outlines."}'
+    - '// @input SceneObject dramLed {"hint":"DRAM LED."}'
+    - '// @input AssignableType_1 monitor {"hint":"Monitor screen UI."}'
+    - '// @input SceneObject xRay {"hint":"X-ray group."}'
+    - '// @input AssignableType_2 arrow {"hint":"Arrow controller."}'
+    - '// @input AssignableType_3 nextCue {"hint":"The arrow over the current next-step target."}'
+    - '// @input SceneObject batteryPad {"hint":"Battery pad."}'
+    - '// @input AssignableType_4 powerCord {"hint":"PowerCord."}'
+    - '// @input AssignableType_5 glass {"hint":"Glass."}'
+    - '// @input AssignableType_6 gpu {"hint":"GPU."}'
+    - '// @input AssignableType_7 jumper {"hint":"Jumper."}'
+    - '// @input AssignableType_8 rstJumper {"hint":"RstJumper decoy: the RST pins beside CLR_CMOS."}'
+    - '// @input AssignableType_9 battery {"hint":"Battery."}'
+    - '// @input AssignableType_10 batteryRedPart {"hint":"BatteryRedPart decoy."}'
+    - '// @input AssignableType_11 socket {"hint":"Socket decoy."}'
+    - '// @input AssignableType_12 memoryStick {"hint":"MemoryStick decoy."}'
+    - '// @input AssignableType_13 powerButton {"hint":"PowerButton."}'
+    - '// @input AssignableType_14 symptomButton {"hint":"SymptomButton."}'
+    - '// @input AssignableType_15 anchorButton {"hint":"AnchorButton."}'
+    - '// @input AssignableType_16 rebuildButton {"hint":"RebuildButton."}'
+    - '// @input AssignableType_17 symptomLabel {"hint":"SymptomLabel."}'
+    - '// @input AssignableType_18 symptomNote {"hint":"SymptomNote: the caution sentence of the opening, in the top lane."}'
+    - '// @input AssignableType_19 stepLabel {"hint":"StepLabel."}'
+    - '// @input AssignableType_20 stepLabel2 {"hint":"StepLabel2, used only at the fix."}'
+    - '// @input AssignableType_21 refusalLine {"hint":"RefusalLine."}'
+    - '// @input AssignableType_22 waitCard {"hint":"WaitCard."}'
+    - '// @ui {"widget":"group_end"}'

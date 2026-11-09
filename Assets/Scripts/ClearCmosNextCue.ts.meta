@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/a2340ec8-479b-47a3-a172-e4d82c1dc8ff>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 1c5181c1-4962-4a0f-aa7f-624acc744b74
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 1c5181c1-4962-4a0f-aa7f-624acc744b74
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 49bdb13f-7e4d-41b5-bc2a-36b7eeab4e4f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/49bdb13f-7e4d-41b5-bc2a-36b7eeab4e4f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 14ee0449-3df1-44ad-9ed1-726d5fea8862
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bobCm: false
+    hoverAlpha: false
+    lengthCm: false
+    tipGapCm: false
+    widthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - widthCm: !<float> 3.000000
+      lengthCm: 3.800000
+      tipGapCm: 1.500000
+      bobCm: 0.500000
+      hoverAlpha: 0.300000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ClearCmosNextCue – the arrow at the next step</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float widthCm = 3 {"hint":"Arrow width in cm.", "widget":"slider", "min":1, "max":6, "step":0.1}'
+    - '// @input float lengthCm = 3.8 {"hint":"Arrow length in cm.", "widget":"slider", "min":1, "max":8, "step":0.1}'
+    - "// @input float tipGapCm = 1.5 {\"hint\":\"Gap in cm between the arrow tip and the top of the target's ring or button.\", \"widget\":\"slider\", \"min\":0, \"max\":5, \"step\":0.1}"
+    - '// @input float bobCm = 0.5 {"hint":"How far the arrow bobs in cm, in phase with the ring pulse.", "widget":"slider", "min":0, "max":2, "step":0.1}'
+    - '// @input float hoverAlpha = 0.3 {"hint":"Arrow alpha while the user hovers the target.", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

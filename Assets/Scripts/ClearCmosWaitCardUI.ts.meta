@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/c4fa122a-f3f9-4437-a950-0c4ff1848f7d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a9653420-05af-46ac-8206-91c993cdce53
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a9653420-05af-46ac-8206-91c993cdce53
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e95986c6-1b1b-46f2-8e4e-0fe593dfd7e9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e95986c6-1b1b-46f2-8e4e-0fe593dfd7e9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: d2bdffe4-ca83-4497-9798-ff7630d734d4
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    explanationText: false
+    heightCm: false
+    realWaitText: false
+    widthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - widthCm: !<float> 30.000000
+      heightCm: !<float> 18.000000
+      realWaitText: "real wait: a few minutes"
+      explanationText: "This clears the saved BIOS settings, including the bad change."
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ClearCmosWaitCardUI – countdown card</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float widthCm = 22 {"hint":"Card width in cm.", "widget":"slider", "min":16, "max":40, "step":0.5}'
+    - '// @input float heightCm = 13 {"hint":"Card height in cm.", "widget":"slider", "min":10, "max":30, "step":0.5}'
+    - '// @input string realWaitText = "Time-lapsed." {"hint":"Note line below the countdown."}'
+    - '// @input string explanationText = "Clears saved BIOS settings." {"hint":"Explanation line."}'
+    - '// @ui {"widget":"group_end"}'

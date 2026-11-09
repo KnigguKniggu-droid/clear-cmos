@@ -1,0 +1,67 @@
+- !<AssetImportMetadata/f0db49c8-6f6b-4651-b6ba-da9861f33278>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 31378f2c-c6ec-44b3-a992-eb8664951f99
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 31378f2c-c6ec-44b3-a992-eb8664951f99
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 0c965dd8-c9db-4274-b15c-6562bfae381f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/0c965dd8-c9db-4274-b15c-6562bfae381f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 15454823-0fbb-4c7e-aa6c-6f6a14afc031
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    arrow: false
+    cameraObject: false
+    distanceCm: false
+    followSpeed: false
+    target: false
+    viewHalfAngle: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      arrow: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      target: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      viewHalfAngle: !<float> 20.000000
+      distanceCm: !<float> 55.000000
+      followSpeed: !<float> 3.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ClearCmosArrow – points to the power cord</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject cameraObject {"hint":"The camera object."}'
+    - '// @input SceneObject arrow {"hint":"The arrow SceneObject. It is enabled only while the target is out of view."}'
+    - '// @input SceneObject target {"hint":"The object the arrow points at."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float viewHalfAngle = 14 {"hint":"Half view angle in degrees. Outside this angle the target counts as out of view.", "widget":"slider", "min":10, "max":45, "step":1}'
+    - '// @input float distanceCm = 55 {"hint":"Distance from the eyes to the arrow in cm.", "widget":"slider", "min":30, "max":100, "step":1}'
+    - '// @input float followSpeed = 3 {"hint":"How fast the arrow follows the gaze.", "widget":"slider", "min":0.5, "max":8, "step":0.1}'
+    - '// @ui {"widget":"group_end"}'

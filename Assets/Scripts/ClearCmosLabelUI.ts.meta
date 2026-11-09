@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/4c1f69d8-3ab5-46e8-9326-903fb7c32062>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9264c108-0212-4601-bf35-249007caf843
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9264c108-0212-4601-bf35-249007caf843
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 0f82600e-3324-455f-862f-b144cb2556b4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/0f82600e-3324-455f-862f-b144cb2556b4>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 5ac6c466-1204-4dad-91a6-71a7b7ea58db
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    heightCm: false
+    showPlate: false
+    textColor: false
+    textSize: false
+    widthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - widthCm: !<float> 15.000000
+      heightCm: !<float> 4.000000
+      textSize: !<float> 88.000000
+      textColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      showPlate: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ClearCmosLabelUI – one text line on a panel</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float widthCm = 15 {"hint":"Panel width in cm.", "widget":"slider", "min":8, "max":40, "step":0.5}'
+    - '// @input float heightCm = 4 {"hint":"Panel height in cm.", "widget":"slider", "min":3, "max":12, "step":0.5}'
+    - '// @input float textSize = 88 {"hint":"Text size. 88 is about 2 cm tall.", "widget":"slider", "min":40, "max":120, "step":1}'
+    - '// @input vec4 textColor = "{1, 1, 1, 1}" {"hint":"Text color.", "widget":"color"}'
+    - '// @input bool showPlate = true {"hint":"Draws the panel behind the text. A secondary line turns it off, so it reads as a line and not as a second card."}'
+    - '// @ui {"widget":"group_end"}'

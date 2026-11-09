@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/f9e167b4-0b72-49d9-87cc-60f3768e922e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 56d4064f-245f-4fc6-98db-856c4d3018db
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 56d4064f-245f-4fc6-98db-856c4d3018db
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 59571b4b-9c8e-4a98-8fd9-2285c60b162b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/59571b4b-9c8e-4a98-8fd9-2285c60b162b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: dd405254-84fe-49ec-90c8-d12a07c21f34
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    heightCm: false
+    hidePlate: false
+    labelText: false
+    textSize: false
+    widthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - labelText: Button
+      widthCm: !<float> 26.000000
+      heightCm: !<float> 5.000000
+      textSize: !<float> 70.000000
+      hidePlate: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ClearCmosActionButtonUI – one labelled button</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string labelText = "Button" {"hint":"Button label."}'
+    - '// @input float widthCm = 26 {"hint":"Button width in cm.", "widget":"slider", "min":4, "max":40, "step":0.5}'
+    - '// @input float heightCm = 5 {"hint":"Button height in cm.", "widget":"slider", "min":4, "max":12, "step":0.5}'
+    - '// @input float textSize = 70 {"hint":"Label text size. 88 is about 2 cm tall.", "widget":"slider", "min":40, "max":120, "step":1}'
+    - '// @input bool hidePlate {"hint":"Hides the button plate, so only the pinch target remains. Used when the real part is the target."}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/163bc662-c977-47d1-9642-0dea00864f8e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c3de982f-6bf7-4850-9418-51e93f5e6fd7
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c3de982f-6bf7-4850-9418-51e93f5e6fd7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 99938fe4-57d4-47d6-be7f-e0fcec48ab58
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/99938fe4-57d4-47d6-be7f-e0fcec48ab58>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: a2463d84-06cb-4e1a-9164-91a4e83a729c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bootLine: false
+    bootLineDropCm: false
+    noSignalText: false
+    textColor: false
+    textSize: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - noSignalText: No signal
+      bootLine: Booting... BIOS settings cleared
+      textSize: !<float> 180.000000
+      textColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      bootLineDropCm: 9.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ClearCmosMonitorUI – monitor text</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string noSignalText = "No signal" {"hint":"Screen text before the fix."}'
+    - '// @input string bootLine = "Booting..." {"hint":"Screen text after power on."}'
+    - '// @input float textSize = 180 {"hint":"Monitor text size.", "widget":"slider", "min":60, "max":400, "step":1}'
+    - '// @input vec4 textColor = "{1, 1, 1, 1}" {"hint":"Monitor text color.", "widget":"color"}'
+    - '// @input float bootLineDropCm = 9.5 {"hint":"How far below the screen center the boot line sits, in cm. Only the lower part of the screen is inside the working view.", "widget":"slider", "min":0, "max":12, "step":0.5}'
+    - '// @ui {"widget":"group_end"}'

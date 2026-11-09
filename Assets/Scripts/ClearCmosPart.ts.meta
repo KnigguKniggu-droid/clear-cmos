@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/c76789c0-0060-4c39-b7e2-8f381464c9ef>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b7ed1aeb-953a-458e-8e93-ce7e2d314961
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b7ed1aeb-953a-458e-8e93-ce7e2d314961
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 818248c5-8c71-4f6f-a915-36ab32adc09d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/818248c5-8c71-4f6f-a915-36ab32adc09d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 3a4ef709-fb78-4978-a38e-23c0ade2cf9f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    colliderSize: false
+    decoy: false
+    draggable: false
+    moveOffset: false
+    refusalText: false
+    targetOffset: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - colliderSize: !<Vec3> {x: 4.000000, y: 4.000000, z: 4.000000}
+      decoy: false
+      draggable: false
+      moveOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      refusalText: ""
+      targetOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ClearCmosPart – one pinchable part</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input vec3 colliderSize = {4,4,4} {"hint":"Collider size in cm. Keep each axis at 3 cm or more for pinch targets."}'
+    - '// @input bool decoy {"hint":"Decoy parts show a red outline on hover and refuse every pinch."}'
+    - '// @input bool draggable {"hint":"Allow drag with InteractableManipulation (used by the battery)."}'
+    - '// @input vec3 moveOffset = {0,0,0} {"hint":"Local offset in cm applied when the part moves away."}'
+    - '// @input string refusalText {"hint":"Refusal line for this part. Empty uses the generic refusal line."}'
+    - '// @input vec3 targetOffset = {0,0,0} {"hint":"Offset in cm from the part origin to its pinch target, used when the real part is too small to pinch and the target lives in a magnified callout."}'
+    - '// @ui {"widget":"group_end"}'
