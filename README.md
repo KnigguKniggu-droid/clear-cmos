@@ -1,6 +1,6 @@
 # Clear CMOS
 
-> **About this repository:** This is a clean snapshot of the project's private development repository at commit `f3cf892`. Commit IDs and tags quoted in these documents refer to that private history. Internal coordination logs and review notes are not included.
+> **About this repository:** This is a clean snapshot of the project's private development repository, started at commit `f3cf892` and updated to the final Lens build (`fc04bbc`). Commit IDs and tags quoted in these documents refer to that private history. Internal coordination logs and review notes are not included.
 
 ![Clear CMOS: a SPECS Lens that shows where a dead PC's reset is hidden](art/thumbnail/thumbnail.png)
 
@@ -19,7 +19,7 @@ New PC builders, and anyone looking at a dead machine who doesn't know which par
 - **It starts from the symptom.** The DRAM light is on and the monitor says "No signal". The label reads "DRAM light stuck on? Pinch it." You pinch the light itself to confirm.
 - **It shows what's covered.** After "Scan this PC (simulated)", an amber X-ray sweep shows the board through the parts on top, with a 3x callout beside the `CLR_CMOS` jumper.
 - **It sets the order.** A safe-path ribbon runs from the power cord to the reset, clear of the red no-go boxes. From the cord step until it's unplugged, pinching anything else gets a refusal.
-- **It warns before you grab.** If the pointer rests in a no-go box for 350 ms, the box flashes and a line gives the reason: "Stop: RST only restarts." on the RST pins, "Stop: BIOS reset comes first." on the memory, "Stop: CPU pins bend easily." on the CPU socket, and "Stop: leave the red part." on any other red part (checked by LEAF with a scripted pointer). A real Windows cursor rest on the RST pins and the memory also fired it, with no click, no person at the controls and no device. If you click anyway, the part shakes and refuses with its own line, for example "RST restarts. Use CLR_CMOS." Each warning or refusal line shows for 2.5 s. A part that is not the next step gets "Follow the green ring first." The memory gets "Try the BIOS reset first."
+- **It warns before you grab.** If the pointer rests in a no-go box for 350 ms, the box flashes and a line gives the reason: "Stop: RST only restarts." on the RST pins, "Stop: BIOS reset comes first." on the memory, "Stop: CPU pins bend easily." on the CPU socket, and "Stop: leave the red part." on any other red part (checked by LEAF with a scripted pointer). A real Windows cursor, moved by script, resting on the RST pins and the memory also fired it, with no click, no person at the controls and no device. If you click anyway, the part shakes and refuses with its own line, for example "RST restarts. Use CLR_CMOS." Each warning or refusal line shows for 2.5 s. A part that is not the next step gets "Follow the green ring first." The memory gets "Try the BIOS reset first."
 - **It catches the wrong pins.** The board has two pin pairs side by side, RST and `CLR_CMOS`. Pinch RST at the reset step and it shakes and says "RST restarts. Use CLR_CMOS." `CLR_CMOS` is the pair that does the reset.
 - **It walks the fix.** Touch the two `CLR_CMOS` pins with a metal screwdriver (animated), wait (time-lapsed), rebuild, and power on. The DRAM light holds through first-boot memory training, then goes out.
 - **It sounds each moment.** Eight short sounds: a confirm on most finished steps, a sweep and a draw for the scan, a warning tick when you rest in a no-go box, a thud on a refused grab, a contact tick when the screwdriver touches the pins, a ring at the boot, and a chime that plays once when the arrow to the power cord is out of view.
@@ -29,7 +29,7 @@ Clearing CMOS is a common first fix. It does not always work. If the DRAM light 
 ## What is simulated
 - The PC is virtual, modeled on a Gigabyte B650 AORUS PRO AX with an RX 7900 XT.
 - A button stands in for recognition: "Scan this PC (simulated)".
-- The mouse stands in for your hand. The video caption says "Mouse = hand. Recognition simulated."
+- The cursor stands in for your hand. The video caption says "Cursor = hand. Recognition simulated."
 - Part positions are estimates read from the board manual's layout page (p.4). They aren't checked on a physical board, and placement in this build is illustrative.
 - The recovery is simulated: the Lens ends on "Simulated recovery: POST successful."
 - It runs in the Lens Studio preview only and was not tested on Spectacles hardware. Comfort and real hand tracking on SPECS glasses are unproven.
