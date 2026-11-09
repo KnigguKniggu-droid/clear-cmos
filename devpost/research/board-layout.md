@@ -110,7 +110,7 @@ The four LEDs sit within 0.4 cm of each other. At 85 cm a DramLed placed anywher
   - ESTIMATE (p.4): the two `CLR_CMOS` pins run along y in the Lens frame; the two RST pins run along x. The headers are rotated 90 degrees to each other.
 - **The battery is not under the GPU, but it is crowded.**
   - Inferred from p.4: the card's cooler hangs from the x16 slot toward the bottom edge. A 2- to 2.5-slot card stops about 1 cm short of the cell; a 3-slot card reaches its edge.
-  - The model of Kartikeya's RX 7900 XT, and so its thickness: UNKNOWN.
+  - The model of the RX 7900 XT on the real PC, and so its thickness: UNKNOWN.
   - Inferred from p.4: the holder sits beside the M2C_SB connector, inside the footprint of an 80 mm SSD in that slot.
   - MANUAL p.25: the M.2 slots have motherboard heatsinks. Whether a heatsink or SSD sits over the battery on the real board: UNKNOWN; check the board.
   - Reported (TechPowerUp forum, X670 AORUS Elite AX, a different board): Gigabyte has put the battery under a heatsink on related boards.
