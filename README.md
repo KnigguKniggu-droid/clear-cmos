@@ -6,7 +6,11 @@
 
 A Lens for Snap's SPECS glasses, made for Learn AR with SPECS on Devpost by Kartikeya Lathi and William Lu.
 
-**Demo video:** https://youtu.be/hhK8AB4VEeI
+**Demo video:** https://youtu.be/1Mm-o37YCGg
+
+## Team
+- **Kartikeya Lathi** ([@KnigguKniggu-droid](https://github.com/KnigguKniggu-droid)): idea, planning and build with CLAD, testing, video.
+- **William Lu** ([@wiiqz](https://github.com/wiiqz)): hands-on click-through testing that caught the misplaced DRAM light, board-layout check of RST beside CLR_CMOS, README build and run steps.
 
 One BIOS change left a PC unable to boot. The fix took minutes, but there was no way to see where to go, and touching anything felt too risky, so the PC sat dead for months. That really happened to one of us.
 
