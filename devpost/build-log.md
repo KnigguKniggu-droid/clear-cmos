@@ -283,3 +283,23 @@ Tested on tag `leaf-freeze` in the Lens Studio Preview with the real Windows cur
 - Memory sticks at Step.Fix: `early warning MemoryStick at step Fix` logged at 07:39:11.
 - An earlier automated pass through InjectPreviewGesture produced no warning from bare moves. Those moves do not produce real hover.
 - Still unproven: feel with a person at the controls, and any device.
+
+## Polish build: LEAF and real-cursor run, 2026-11-09
+Objective: record the LEAF count and the real-cursor warning result for the polish build, with the limits of those runs.
+
+Commit under test: fc04bbc in our private development history, branch `lens-final-polish`. Changes seen by a user:
+- The early warning no longer shows "Stopped before contact." for every part. RST pins: "Stop: RST only restarts." Memory: "Stop: BIOS reset comes first." CPU socket: "Stop: CPU pins bend easily." Any other red part: "Stop: leave the red part."
+- "No signal" sits lower on the monitor, inside the working view.
+- Part labels (RST, CLR_CMOS, DRAM, Memory) are larger.
+- Refusal lines after a click are unchanged.
+
+Tests changed for this build: `s4-refusal`, `s7-early-warning` and `ClearCmosTestSupport`, in the same commit.
+
+Result: 10 of 10 scenarios passed, 0 failed, with scripted input at the working view. Ids: s1-start, s2-anchor, s3-order, s4-refusal, s5a-jumper, s5b-battery, s6-band, s7-early-warning, s8-rst, s9-sound.
+
+Real-cursor runs on the polish build, 2026-11-09: real Windows cursor moved by script, no person at the controls, no device, Lens Studio Preview.
+- The cursor ran the flow from Symptom to Done.
+- RST pins: a rest with no click fired the warning.
+- Memory sticks: a rest with no click fired the warning.
+- CPU socket and another red part: no real-cursor result recorded.
+- Still unproven: feel with a person at the controls, and any device.

@@ -138,7 +138,7 @@ export async function noGoAlphaForRayGap(name: string, gapCm: number): Promise<n
 }
 
 /** The line the early warning shows. The part's own reason appears only after a pinch. */
-export const WARNING_LINE = "Stopped before contact."
+export const WARNING_LINES = { MemoryStick: "Stop: BIOS reset comes first.", Socket: "Stop: CPU pins bend easily." }
 
 export function expectRefused(partName: string, expectedLine: string | null): void {
   must(isEnabled("RefusalLine"), "RefusalLine is not enabled after refusing " + partName)

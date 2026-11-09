@@ -54,7 +54,7 @@ export class ClearCmosMonitorUI extends BaseScriptComponent {
 
   showNoSignal(): void {
     this.text.text = this.noSignalText
-    this.getTransform().setLocalPosition(this.homeLocalPosition)
+    this.getTransform().setLocalPosition(this.homeLocalPosition.add(new vec3(0, -this.bootLineDropCm, 0)))
   }
 
   showBoot(): void {

@@ -4,7 +4,7 @@ import { Step } from "../Scripts/ClearCmosFlow"
 import {
   ClearCmosLeafInteractor,
   expectRefused,
-  WARNING_LINE,
+  WARNING_LINES,
   expectRefusalLineInView,
   expectRefusalMotion,
   expectRings,
@@ -53,7 +53,7 @@ export class ClearCmosS4Refusal extends Scenario {
     await settle(700)
     must(outline.enabled, "MemoryStick red outline is not on during hover")
     // The early warning: 700 ms in the box is past the 350 ms dwell, and no pinch has happened. The reason waits for a pinch.
-    expectRefused("MemoryStick", WARNING_LINE)
+    expectRefused("MemoryStick", WARNING_LINES.MemoryStick)
     const nearAlpha = noGoAlpha("MemoryStick")
     print("[ClearCmosLeaf] no-go alpha idle " + idleAlpha.toFixed(3) + " near " + nearAlpha.toFixed(3))
     must(nearAlpha > idleAlpha + 0.2, "MemoryStick no-go box did not strengthen near the cursor")

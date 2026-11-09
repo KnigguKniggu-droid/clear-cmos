@@ -24,7 +24,7 @@ import {
   sampleEarlyWarning,
   settle,
   sfxCount,
-  WARNING_LINE,
+  WARNING_LINES,
   worldPosition,
 } from "./ClearCmosTestSupport"
 
@@ -100,7 +100,7 @@ export class ClearCmosS7EarlyWarning extends Scenario {
     must(earlyWarningCount() === startCount + 1, "expected one warning, count is " + (earlyWarningCount() - startCount))
     must(sfxCount("warning_tick") === startTicks + 1, "expected one warning_tick, count is " + (sfxCount("warning_tick") - startTicks))
     expectStep(Step.PowerCord)
-    expectRefused("MemoryStick", WARNING_LINE)
+    expectRefused("MemoryStick", WARNING_LINES.MemoryStick)
     expectRefusalLineInView("MemoryStick")
     expectLineClearOfLabels(["StepLabel"])
 
@@ -125,7 +125,7 @@ export class ClearCmosS7EarlyWarning extends Scenario {
     must(socketWarnedAt < COOLDOWN_SECONDS + 0.35, "the Socket warned after the memory cooldown, so it proves nothing about per-box cooldowns")
     must(earlyWarningCount() === startCount + 2, "the Socket box did not warn on its own cooldown")
     expectStep(Step.PowerCord)
-    expectRefused("Socket", WARNING_LINE)
+    expectRefused("Socket", WARNING_LINES.Socket)
     expectRefusalLineInView("Socket")
     expectLineClearOfLabels(["StepLabel"])
 
@@ -142,7 +142,7 @@ export class ClearCmosS7EarlyWarning extends Scenario {
     await interactor.hoverPart("MemoryStick", WARNING_HOVER_MS)
     expectEarlyWarningFlash("MemoryStick", await thirdSample)
     must(earlyWarningCount() === startCount + 3, "the warning did not return after the cooldown")
-    expectRefused("MemoryStick", WARNING_LINE)
+    expectRefused("MemoryStick", WARNING_LINES.MemoryStick)
 
     // The line also stays clear of both labels at the fix, the busiest step.
     await liftAndCheck(interactor, "PowerCord", Step.Glass)

@@ -84,7 +84,7 @@ const SHELL_FILL_RGB = new vec3(0.0956, 0.175, 0.2)
 const SHELL_FILL_FADE_SECONDS = 0.9
 const CHASSIS_BAR_CM = 0.2
 /** Local offset of the Jumper silkscreen while the callout is on: on the far side of the CLR_CMOS cage, clear of the GPU corner. */
-const CALLOUT_LABEL_LOCAL = new vec3(-0.7, 0.8, -2.1)
+const CALLOUT_LABEL_LOCAL = new vec3(-1.6, 0.8, -2.7)
 /** The top of JumperVisual, above the part origin. */
 const JUMPER_TOP_CM = 0.45
 /** Half the spacing of the CLR_CMOS pins, which run along z on this board. */
@@ -153,8 +153,6 @@ const EARLY_WARNING_MIN_LINE_SECONDS = 0.6
 const EARLY_WARNING_COOLDOWN_SECONDS = 2
 /** A press this soon after the Glass lift is the late half of a double press. It is ignored, not refused. */
 const GLASS_SECOND_PRESS_IGNORE_SECONDS = 1.2
-/** The warning names what just happened. The part's own reason waits for a pinch, so the warning and the refusal read differently. */
-const EARLY_WARNING_LINE = "Stopped before contact."
 /** A cursor counts as moved past half a degree, about 0.8 cm on the board at the working distance. Tuned for a mouse; real hand jitter is UNKNOWN. */
 const LIFT_HOLD_MOVE_COS = Math.cos((0.5 * Math.PI) / 180)
 const LIFT_HOLD_MOVE_CM = 0.5
@@ -953,7 +951,7 @@ export class ClearCmosMain extends BaseScriptComponent {
     if (state.warned || now < state.cooldownUntil || now - state.inBoxSince < EARLY_WARNING_DWELL_SECONDS) return
     this.startEarlyWarningCooldown(part, now)
     this.earlyWarningCount++
-    this.showRefusalLine(part, Math.max(EARLY_WARNING_MIN_LINE_SECONDS, this.refusalSeconds), EARLY_WARNING_LINE)
+    this.showRefusalLine(part, Math.max(EARLY_WARNING_MIN_LINE_SECONDS, this.refusalSeconds), this.earlyWarningLine(part))
     part.playWarningFlash(EARLY_WARNING_MIN_LINE_SECONDS)
     this.playSfx("warning_tick")
     print("[ClearCmos] early warning " + part.getSceneObject().name + " at step " + Step[this.step])
@@ -1128,6 +1126,10 @@ export class ClearCmosMain extends BaseScriptComponent {
     this.gpuSilkscreenText = gpuLabelObject.getComponent("Component.Text") as Text
     this.gpuSilkscreenColor = this.gpuSilkscreenText.textFill.color
     this.dramTag = this.rig.children.find((c) => c.name === "DramTag")
+    const memoryLabel = this.memoryStick.getSceneObject().children.find((c) => c.name === "Label")
+    const labelSizes: [SceneObject, number][] = [[this.jumperSilkscreen, 56], [this.rstSilkscreen, 62], [this.dramTag, 52], [memoryLabel, 88]]
+    for (const [label, size] of labelSizes) (label.getComponent("Component.Text") as Text).size = size
+    this.dramTag.getTransform().setLocalPosition(new vec3(5.2, 1.8, 11.4))
 
     this.screwdriver = global.scene.createSceneObject("Screwdriver")
     this.screwdriver.setParent(this.rig)
@@ -1254,6 +1256,14 @@ export class ClearCmosMain extends BaseScriptComponent {
     // A pinch already told the user, so the same stay must not warn again.
     this.startEarlyWarningCooldown(part, getTime())
     print("[ClearCmos] refused " + part.getSceneObject().name + " at step " + Step[this.step])
+  }
+
+  /** The warning says why this part is a no-go, before contact. A pinch then gets the part's own refusal line. */
+  private earlyWarningLine(part: ClearCmosPart): string {
+    if (part === this.rstJumper) return "Stop: RST only restarts."
+    if (part === this.memoryStick) return "Stop: BIOS reset comes first."
+    if (part === this.socket) return "Stop: CPU pins bend easily."
+    return "Stop: leave the red part."
   }
 
   private showRefusalLine(part: ClearCmosPart, seconds: number, text: string = ""): void {
