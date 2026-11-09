@@ -30,7 +30,7 @@ Clearing CMOS is a common first fix. It does not always work. If the DRAM light 
 - The mouse stands in for your hand. The video caption says "Mouse = hand. Recognition simulated."
 - Part positions are estimates read from the board manual's layout page (p.4). They aren't checked on a physical board, and placement in this build is illustrative.
 - The recovery is simulated: the Lens ends on "Simulated recovery: POST successful."
-- It runs in the Lens Studio preview only. Comfort and real hand tracking on SPECS glasses are unproven.
+- It runs in the Lens Studio preview only and was not tested on Spectacles hardware. Comfort and real hand tracking on SPECS glasses are unproven.
 - This is guidance for one board, not a professional repair guide. Unplug the PC first and handle parts gently.
 
 Guided AR repair already exists, for example Microsoft Dynamics 365 Guides and Dell AR Assistant. Other projects, including FieldFix AR, already have X-ray views and blocked steps. We don't claim those as new.
@@ -48,8 +48,16 @@ Guided AR repair already exists, for example Microsoft Dynamics 365 Guides and D
 2. Open `LearnWithARSPECShackathon.esproj` in Lens Studio 5.24.1. The project was saved in 5.24.1.26100516; older versions are untested.
    - Opening the project shows a "SPECS is in Preview Release" dialog. Click OK.
    - The initial compile of a fresh clone takes about 40 s, and Preview says "Preview is not ready" until it finishes.
-3. Use Interactive Preview. WASD moves, Q and E go down and up, right-drag looks around, and a click is a pinch.
-4. The board sits low in the room. In Preview, use camera Reset, look down about 35 degrees with right-drag, then refresh the Lens. LEAF scenario `s2-anchor` expects this view: it failed at about -12 degrees and passed at -35 degrees.
+3. Use Interactive Preview. WASD moves, Q and E go down and up, right-drag looks around, and a click is a pinch. Avoid a single right-click: it resets the Preview zoom.
+4. The board sits low in the room. In Preview, use camera Reset, look down about 35 degrees with right-drag, then refresh the Lens. LEAF scenario `s2-anchor` expects this view: it failed at about -12 degrees and passed at -35 degrees. Pinch the pulsing amber DRAM light to start. Each next step shows a gentle blink and a green arrow.
+
+### Key scripts
+- `Assets/Scripts/ClearCmosMain.ts`: the current step and every flow decision; places the board relative to you.
+- `Assets/Scripts/ClearCmosPart.ts`: one pinchable part, with its collider, hover outline, next-step ring and no-go box.
+- `Assets/Tests/LeafIndex.ts`: registers the LEAF scenarios; each scenario is its own file in `Assets/Tests/`.
+
+### Run the tests
+LEAF runs without any AI. Open the LEAF panel, reset the Preview, pick a scenario, run it, and read PASSED or FAILED in the Logger.
 
 ## Board art
 
