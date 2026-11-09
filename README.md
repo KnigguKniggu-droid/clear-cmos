@@ -4,7 +4,9 @@
 
 ![Clear CMOS: a SPECS Lens that shows where a dead PC's reset is hidden](art/thumbnail/thumbnail.png)
 
-A Lens for Snap's SPECS glasses, made for Learn AR with SPECS on Devpost.
+A Lens for Snap's SPECS glasses, made for Learn AR with SPECS on Devpost by Kartikeya Lathi and William Lu.
+
+**Demo video:** https://youtu.be/hhK8AB4VEeI
 
 One BIOS change left a PC unable to boot. The fix took minutes, but there was no way to see where to go, and touching anything felt too risky, so the PC sat dead for months. That really happened to one of us.
 
@@ -38,7 +40,7 @@ Guided AR repair already exists, for example Microsoft Dynamics 365 Guides and D
 ## How it was built
 1. **Plan:** the Devpost Learn plan-lens skill interviewed us and wrote the design brief: `devpost/design-brief.md`. Research and iterations are in `devpost/research/`.
 2. **Build:** CLAD (Closed Loop Agentic Development, Snap's agents and skills for Lens Studio) wrote the scripts and built the scene through the Lens Studio MCP. A reviewer agent scored build rounds 1 to 3, and we fixed its top flaw after rounds 1 and 2 (`devpost/build-log.md`).
-3. **Test:** LEAF scenarios run the steps in the preview through Interaction Kit, with LEAF's scripted interactor in place of a person. At commit fc04bbc in our private development history (branch `lens-final-polish`), **10 of 10 scenarios passed** (`devpost/build-log.md`, Polish build section), including the wrong-pins refusal and a scenario that checks each sound plays at its moment. A teammate clicked through an earlier build. Not done on the polish build: a person's walk-through, the 16:9 frame check, listening to the sounds, and testing on a device.
+3. **Test:** LEAF scenarios run the steps in the preview through Interaction Kit, with LEAF's scripted interactor in place of a person. At commit fc04bbc in our private development history (branch `lens-final-polish`), **10 of 10 scenarios passed** (`devpost/build-log.md`, Polish build section), including the wrong-pins refusal and a scenario that checks each sound plays at its moment. A teammate clicked through an earlier build. Not done on the polish build: a person's walk-through, the 16:9 frame check, listening to the sounds, and testing on a device. A fresh anonymous clone of this repository, opened in Lens Studio 5.24.1, compiled and passed the same 10 of 10 at the working view. That PC has the CLAD and LEAF plugins, so it does not prove the result on a machine without them.
 4. **Facts:** board positions are estimated from the exact board manual's layout drawing (`devpost/research/board-layout.md`); the RST pins beside `CLR_CMOS` were checked by eye. The board art, the sounds and the thumbnail were generated for this project (`art/`).
 
 ## Run it
