@@ -8,6 +8,8 @@ A Lens for Snap's SPECS glasses, made for Learn AR with SPECS on Devpost by Kart
 
 **Demo video:** https://youtu.be/1Mm-o37YCGg
 
+**Safety:** This is guidance for one board, not a professional repair guide. Unplug the PC first and handle parts gently.
+
 ## Team
 - **Kartikeya Lathi** ([@KnigguKniggu-droid](https://github.com/KnigguKniggu-droid)): idea, planning and build with CLAD, testing, video.
 - **William Lu** ([@wiiqz](https://github.com/wiiqz)): hands-on click-through testing that caught the misplaced DRAM light, board-layout check of RST beside CLR_CMOS, README build and run steps.
@@ -37,7 +39,6 @@ Clearing CMOS is a common first fix. It does not always work. If the DRAM light 
 - Part positions are estimates read from the board manual's layout page (p.4). They aren't checked on a physical board, and placement in this build is illustrative.
 - The recovery is simulated: the Lens ends on "Simulated recovery: POST successful."
 - It runs in the Lens Studio preview only and was not tested on Spectacles hardware. Comfort and real hand tracking on SPECS glasses are unproven.
-- This is guidance for one board, not a professional repair guide. Unplug the PC first and handle parts gently.
 
 Guided AR repair already exists, for example Microsoft Dynamics 365 Guides and Dell AR Assistant. Other projects, including FieldFix AR, already have X-ray views and blocked steps. We don't claim those as new.
 
